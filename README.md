@@ -17,3 +17,5 @@ new YuumiClip(file: File, {
   confirm?: (data: any, done: any) => any;
 })
 ```
+
+![demo](https://s2.ax1x.com/2020/01/05/lDP1EQ.md.png)
