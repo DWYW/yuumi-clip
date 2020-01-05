@@ -12,6 +12,8 @@
 .yuumi-clip .yuumi-clip-footer {
   position: absolute;
   left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   color: #ffffff;
   background-color: #333333;
@@ -51,6 +53,8 @@
 }
 .yuumi-clip .yuumi-clip-body {
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding-top: 50px;
@@ -126,4 +130,31 @@
   left: -2px;
   border-bottom: 2px solid #ffffff;
   border-left: 2px solid #ffffff;
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .yuumi-clip .yuumi-clip-footer {
+    height: 70px;
+    padding-bottom: 20px;
+  }
+  .yuumi-clip .yuumi-clip-body {
+    padding-bottom: 70px;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .yuumi-clip .yuumi-clip-footer {
+    height: 70px;
+    padding-bottom: 20px;
+  }
+  .yuumi-clip .yuumi-clip-body {
+    padding-bottom: 70px;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  .yuumi-clip .yuumi-clip-footer {
+    height: 70px;
+    padding-bottom: 20px;
+  }
+  .yuumi-clip .yuumi-clip-body {
+    padding-bottom: 70px;
+  }
 }

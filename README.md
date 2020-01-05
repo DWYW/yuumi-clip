@@ -8,6 +8,7 @@ npm install yuumi-clip --save
 
 ```js
 import YuumiClip from 'yuumi-clip'
+import 'yuumi-clip/release/index.css'
 
 new YuumiClip(file: File, {
   expect?: 'base64'|'blob'|'file';

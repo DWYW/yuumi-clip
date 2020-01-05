@@ -22,7 +22,6 @@
     document.querySelector('input').addEventListener('change', fileChanged)
     
     function fileChanged (e) {
-      console.log(e)
       new YuumiClip(e.target.files[0], {
         cancel (done) {
           e.target.value = ''

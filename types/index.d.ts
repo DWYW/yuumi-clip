@@ -10,5 +10,8 @@ declare namespace _YuumiClip {
 }
 
 declare class YuumiClip {
-  constructor(options: _YuumiClip.ConstructorOptions);
+  constructor(file:File, options: _YuumiClip.ConstructorOptions);
+  destroy: () => void;
 }
+
+export default YuumiClip
