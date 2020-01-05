@@ -1,9 +1,13 @@
 {
   "name": "yuumi-clip",
   "version": "0.1.0",
-  "description": "image clip of mobile",
-  "main": "index.js",
+  "description": "image clip",
+  "main": "release/index.js",
   "typings": "types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DWYW/yuumi-clip"
+  },
   "scripts": {
     "dev": "gulp --env=development",
     "dist": "gulp --env=production",
