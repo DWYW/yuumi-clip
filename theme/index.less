@@ -1,0 +1,161 @@
+@z: 99;
+@header-height: 50px;
+@footer-height: 50px;
+@rect-border-width: 2px;
+@toolbar-background-color: #333333;
+
+.yuumi-clip {
+  position: fixed;
+  z-index: @z;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+
+  .yuumi-clip-header, .yuumi-clip-footer {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+
+    color: #ffffff;
+    background-color: @toolbar-background-color;
+
+    font-size: 16px;
+  }
+
+  .yuumi-clip-header {
+    top: 0;
+
+    overflow: hidden;
+
+    height: @header-height;
+    padding: 0 15px;
+
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    line-height: @header-height;
+  }
+
+  .yuumi-clip-footer {
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: @footer-height;
+
+    .footer-cancel, .footer-confirm {
+      display: block;
+
+      padding: 0 15px;
+
+      line-height: @footer-height;
+    }
+  }
+
+  .yuumi-clip-body {
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+    padding-top: @header-height;
+    padding-bottom: @footer-height;
+
+    user-select: none;
+
+    .clip-body-content {
+      overflow: hidden;
+
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
+
+    .clip-wrapper {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+      
+      .source-wrapper {
+        position: absolute;
+      }
+
+      .clip-grid {
+        position: absolute;
+
+        .clip-grid-body {
+          position: relative;
+
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+
+          box-shadow: 0 0 0 100vh rgba(0, 0, 0, .6);
+
+          &::before {
+            display: block;
+
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+
+            content: '';
+
+            border: 1px solid #ffffff;
+          }
+
+          .rect {
+            position: absolute;
+            z-index: 1;
+
+            width: 30px;
+            height: 30px;
+
+            &.left-top {
+              top: -@rect-border-width;
+              left: -@rect-border-width;
+
+              border-top: @rect-border-width solid #ffffff;
+              border-left: @rect-border-width solid #ffffff;
+            }
+
+            &.right-top {
+              top: -@rect-border-width;
+              right: -@rect-border-width;
+
+              border-top: @rect-border-width solid #ffffff;
+              border-right: @rect-border-width solid #ffffff;
+            }
+
+            &.right-bottom {
+              right: -@rect-border-width;
+              bottom: -@rect-border-width;
+
+              border-right: @rect-border-width solid #ffffff;
+              border-bottom: @rect-border-width solid #ffffff;
+            }
+
+            &.left-bottom {
+              bottom: -@rect-border-width;
+              left: -@rect-border-width;
+
+              border-bottom: @rect-border-width solid #ffffff;
+              border-left: @rect-border-width solid #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
