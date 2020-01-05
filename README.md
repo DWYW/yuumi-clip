@@ -18,4 +18,4 @@ new YuumiClip(file: File, {
 })
 ```
 
-![demo](https://s2.ax1x.com/2020/01/05/lDP1EQ.md.png)
+[示例图](https://github.com/DWYW/yuumi-clip/tree/master/examples/demo.jpg)
